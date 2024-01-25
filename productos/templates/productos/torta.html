@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+
+{% block title %}TORTAS{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-torta1.png' %}{% endblock %}
+
+{% block headers %} 
+    <h1>TORTAS</h1>
+    <span class="text">Aqui Nuestro Catalogo de Tortas</span>
+    <style>
+        body {
+            background-color: #add8e6; /* Color azul pastel suave */
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'core/css/catalogo.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body {
+        background-color: #add8e6; /* Color azul pastel suave */
+    }
+</style>
+<div class="row mx-5">
+{% for torta in torta %}
+<div class="col">
+
+    <div class="card" style="width: 20rem;">
+        <a href="{% url 'torta-detail' torta.slug %}">
+        <img src="{{ torta.image.url }}" class="card-img-top" alt="card">
+        </a>
+    <div class="card-body">
+        <a href="{% url 'torta-detail' torta.slug %}">
+        <h2>{{ torta.title }}</h2>
+        </a>
+        <p class="card-text">${{ torta.coste }}</p>
+    <a href="{% url 'torta-detail' torta.slug %}">
+    <input class="botons" type="submit" name="submit" value="Comprar">
+    </a>
+    </div>
+    </div>
+
+</div>
+{% endfor %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+
+{% endblock %}

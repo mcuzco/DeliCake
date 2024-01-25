@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}TORTAS{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/sobre-nosotros.jpg' %}{% endblock %}
+
+{% block headers %} 
+    <h1>SOBRE NOSOTROS</h1>
+    <span class="subheading">BIOGRAFIA</span>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <div class="row">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/sir.png' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">DELI CAKE</h2>
+
+          
+          <p>En Mary Cakes, nos enorgullece ofrecer experiencias culinarias excepcionales a través de nuestras exquisitas tortas y postres. Somos más que una pastelería; somos creadores de momentos inolvidables que endulzan la vida de nuestros clientes.</p>
+          
+          <p>Nuestro compromiso con la excelencia se refleja en cada creación que sale de nuestra cocina. Utilizamos ingredientes de la más alta calidad, combinados con técnicas artesanales y un toque de innovación para llevar a tu mesa delicias que despiertan los sentidos.</p>
+          
+          <p>Únete a nosotros en este viaje culinario, donde cada bocado es una obra maestra y cada celebración se convierte en un festín para los sentidos. Bienvenido a Mary Cakes, donde la innovación y la tradición se encuentran para crear momentos inolvidables.</p>
+          
+        </div>
+      </div>  
+    </div>
+{% endblock %}

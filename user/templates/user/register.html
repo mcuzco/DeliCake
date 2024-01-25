@@ -1,0 +1,82 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block background %}{% load static %}{% static 'user/image/pastel_de_fresa_23942_orig.jpg' %}{% endblock %}
+
+{% block headers %}
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="{% static 'user/css/estilos_login.css' %}">
+	
+    <style>
+        body {
+            background-color: #add8e6; /* Color azul pastel suave */
+        }
+    </style>
+{% endblock %} 
+
+{% block content %}
+ <form action="#" method="post" class="formulario">
+     <h1>Registrate</h1>
+     <div class="contenedor">
+        {% csrf_token %}
+            {% if form.errors %}
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                <div id="form_errors">
+                    {% for key, value in form.errors.items %}
+                    <strong>{{ value }}</strong>
+                    {% endfor %}
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            {% endif %}
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <label for="name">Nombre <span>*</span></label>
+                <input type="text" name="{{form.first_name.name}}" id="name" value="" size="25">
+                
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <label for="last_name">Apellido <span>*</span></label>
+                <input type="text" name="{{form.last_name.name}}" id="last_name" value="" size="25">
+                
+            </div>
+             <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <label for="username">Usuario<span>*</span></label>
+                <input type="text" name="{{form.username.name}}" id="username" value="" size="20">
+                
+            </div>
+                
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <label for="email">Correo<span>*</span></label>
+                <input type="email" name="{{form.email.name}}" id="email" value="" size="20">
+                
+            </div>
+                
+            <div class="input-contenedor">
+               <i class="fas fa-key icon"></i>
+               <label for="password">Contraseña<span>*</span></label>
+                <input type="password" name="{{form.password1.name}}" id="password" value="" size="32">
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <label for="password2">Repetir Contraseña<span>*</span></label>
+                 <input type="password" name="{{form.password2.name}}" id="password2" value="" size="32">
+            </div>
+
+            <input type="submit" value="Registrate" class="button">
+         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+         <p>¿Ya tienes una cuenta?  <a class="nav-item" class="link" href="{% url 'login' %}">Iniciar Sesion</a></p>
+     </div>
+ </form>
+{% endblock %}

@@ -1,0 +1,80 @@
+
+{% extends 'core/base.html' %}
+
+{% block title %}PORTADA{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/home.jpg' %}{% endblock %}
+
+{% block headers %} 
+    <h1>DELI CAKE</h1>
+    <span class="subheading">PASTELERIA</span>
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'core/css/catalogo.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Agrega un estilo para el fondo del sitio -->
+    <style>
+        body {
+            background-color: #add8e6; /* Color azul pastel suave */
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'path/to/styles.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Sección de Testimonios -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Testimonios de Clientes</h2>
+        <div id="carouselTestimonios" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonio 1 -->
+                <div class="carousel-item active">
+                    <img src="{% static 'core/img/cliente1.avif' %}" class="rounded-circle mx-auto d-block" alt="Cliente 1">
+                    <p class="lead text-center">¡Deliciosos pasteles! No puedo resistirme a probarlos una y otra vez.</p>
+                    <p class="text-center"><strong>Juan Cedeño</strong>, Portoviejo</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="carousel-item">
+                    <img src="{% static 'core/img/cliente2.jpg' %}" class="rounded-circle mx-auto d-block" alt="Cliente 2">
+                    <p class="lead text-center">Increíble variedad de sabores. Siempre encuentro algo nuevo para disfrutar.</p>
+                    <p class="text-center"><strong>Luis Vásquez</strong>, Chone</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="carousel-item">
+                    <img src="{% static 'core/img/cliente3.jpg' %}" class="rounded-circle mx-auto d-block" alt="Cliente 3">
+                    <p class="lead text-center">Los pasteles de DELI CAKE son el regalo perfecto para cualquier ocasión especial.</p>
+                    <p class="text-center"><strong>Carlos López</strong>, Guayaquil</p>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="carousel-item">
+                    <img src="{% static 'core/img/cliente4.jpg' %}" class="rounded-circle mx-auto d-block" alt="Cliente 4">
+                    <p class="lead text-center">Servicio al cliente excepcional. Siempre me siento bienvenido en la pastelería.</p>
+                    <p class="text-center"><strong>Eloy Alfaro</strong>, Chone</p>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="carousel-item">
+                    <img src="{% static 'core/img/cliente5.jpg' %}" class="rounded-circle mx-auto d-block" alt="Cliente 5">
+                    <p class="lead text-center">Calidad y sabor inigualables. ¡Recomiendo DELI CAKE a todos mis amigos!</p>
+                    <p class="text-center"><strong>Simón Bolívar</strong>, Portoviejo</p>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselTestimonios" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselTestimonios" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

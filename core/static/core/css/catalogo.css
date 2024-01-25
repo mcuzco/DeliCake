@@ -1,0 +1,110 @@
+body {
+  background-color: #add8e6;
+  }
+
+  h1 {
+    font-size: 4em;
+    color: #e74c3c; /* Rojo oscuro */
+    font-weight: bold;
+    font-family: 'Pacifico', sans-serif; /* Fuente más creativa */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .text {
+    font-size: 1.2em;
+    font-family: 'Quicksand', 'Arial', sans-serif; /* Fuente más moderna */
+    color: #555; /* Texto gris oscuro */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    background-color: #add8e6;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .col:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .col img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    font-family: 'Raleway', sans-serif; /* Fuente más elegante */
+    color: #3498db; /* Azul suave */
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 1.1em;
+    color: #777; /* Texto gris más claro */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .botons {
+    width: 100%;
+    padding: 15px;
+    background: #27ae60; /* Verde */
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 16px 0;
+    border-radius: 25px;
+    transition: background 0.3s;
+  }
+  
+  .botons:hover {
+    background: #219653; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Estilos para mejorar la apariencia del formulario */
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  
+  /* Ajustes para pantallas más pequeñas */
+  @media screen and (max-width: 1200px) {
+    .col {
+      flex-direction: column;
+      padding: 15px;
+      margin: 20px 0;
+    }
+  }
+  
+  /* Enlaces con estilos atractivos */
+  a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #2980b9;
+  }
+  
+

@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block background %}{% load static %}{% static 'user/image/pastel_de_fresa_23942_orig.jpg' %}{% endblock %}
+
+{% block headers %}
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    {% load static %}
+	
+    <style>
+        body {
+            background-color: #add8e6; /* Color azul pastel suave */
+        }
+    </style>
+{% endblock %} 
+
+{% block content %}
+<div class="wrapper row3">
+	<main class="container clear"> 
+	  <div class="content three_quarter"> 
+		  <h2>Logout Complete</h2>
+			<div class="one_third first">
+			  <p>Has salido de la sesión correctamente.</p>
+			</div>
+			<div class="one_third ">
+			  <p>Volver al Inicio <a href="{% url 'home' %}"> Aquí </a></p>
+			</div>
+			<div class="one_third last">
+			  <p>Iniciar sesión nuevamente <a href="{% url 'login' %}"> Aquí </a></p>
+			</div>
+	  </div>
+	  <!-- / main body -->
+	  <div class="clear"></div>
+	</main>
+  </div>
+{% endblock %}

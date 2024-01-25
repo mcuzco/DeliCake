@@ -1,0 +1,9 @@
+span{
+    font-size: 30px;
+    color: #fff;
+}
+#paypal-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Postre{% endblock %}
+
+{% block background %}{% load static %}{% static 'user/image/imagelr1.jpg' %}{% endblock %}
+
+
+{% block headers %}
+    <meta charset="UTF-8">
+	<title>Postre</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="{% static 'core/css/catalogo.css' %}">
+    
+{% endblock %}
+{% block content %}
+        <div class="row mx-5">
+            <div class="col">
+            
+                <div class="card" style="width: 20rem;">
+                    <img src="{{ postre.image.url }}" class="card-img-top" alt="card">
+                <div class="card-body">
+                    <h2>{{ postre.title }}</h2>
+                    <p>{{postre.description}}</p>
+                    <p class="card-text">${{ postre.coste }}</p>
+                <a href="{% url 'detailcart' postre.slug %}">
+                <input class="botons" type="submit" name="submit" value="Agregar a carrito">
+                </a>
+                </div>
+                </div>
+            
+            </div>
+            </div>
+
+
+{% endblock %}
